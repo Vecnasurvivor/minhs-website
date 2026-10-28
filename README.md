@@ -56,16 +56,20 @@ Start a new Claude Code session, then ask for a website, or type `/minhs-website
 ## Build mode
 
 ```mermaid
-flowchart LR
-    S[0 · Setup] --> D{{1 · Discover}}
-    D --> R[2 · Research]
-    R --> P{{3 · PRD}}
-    P --> DD{{4 · Design direction}}
-    DD --> PL[5 · Plan]
-    PL --> B[6 · Build loop]
-    B --> RV[7 · Review]
-    RV --> SH{{8 · Pre-ship report}}
-    SH --> L((Launch))
+flowchart TB
+    subgraph decide [Decide]
+        direction LR
+        S[0 · Setup] --> D{{1 · Discover}} --> R[2 · Research] --> P{{3 · PRD}} --> DD{{4 · Design}}
+    end
+    subgraph make [Make]
+        direction LR
+        PL[5 · Plan] --> B[6 · Build loop] --> RV[7 · Review]
+    end
+    subgraph ship [Ship]
+        direction LR
+        SH{{8 · Pre-ship report}} --> L((Launch))
+    end
+    decide --> make --> ship
 
     classDef gate fill:#fff3bf,stroke:#f08c00,color:#000
     class D,P,DD,SH gate
