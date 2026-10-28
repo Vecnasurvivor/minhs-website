@@ -1,0 +1,4 @@
+:root { --paper: #f3ecdf; --ink: #231a12; --crust: #b5541b; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 1.0625rem/1.6 "Newsreader", Georgia, serif; }
+.wordmark { font-family: "Bricolage Grotesque", Georgia, serif; font-weight: 800; }
+.cta { background: var(--crust); color: #fff; padding: .7rem 1.2rem; text-decoration: none; }

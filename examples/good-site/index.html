@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harbour Bakery: sourdough baked at 4 a.m., sold out by 10</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="masthead"><p class="wordmark">Harbour Bakery</p><nav aria-label="Main"><a href="#loaves">Loaves</a> <a href="#order">Order for Saturday</a></nav></header>
+  <main>
+    <section class="lead"><h1>Twelve loaves a night. Gone by ten.</h1>
+      <p>We bake a long-fermented sourdough in a wood-fired oven behind the Mill Street fish market. Order by Thursday and we hold yours.</p>
+      <a class="cta" href="#order">Reserve a Saturday loaf</a></section>
+    <section id="order"><h2>Reserve a loaf</h2>
+      <form action="/reserve" method="post"><input type="hidden" name="csrf_token" value="{{ csrf_token }}"><label>Your name <input name="name" autocomplete="name"></label><button>Hold my loaf</button></form></section>
+  </main>
+  <footer><p>14 Mill Street, Tue to Sat, 6 a.m. until sold out. <a href="https://maps.example.org/harbour" target="_blank" rel="noopener noreferrer">Map</a></p></footer>
+</body>
+</html>
