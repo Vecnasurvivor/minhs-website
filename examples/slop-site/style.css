@@ -1,0 +1,5 @@
+/* DELIBERATELY BAD */
+body { font-family: Inter, system-ui, sans-serif; background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%); color: white; }
+.gradient-title { background: linear-gradient(90deg, #a855f7, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.btn { box-shadow: 0 0 40px rgba(139, 92, 246, 0.6); backdrop-filter: blur(12px); border-radius: 32px; }
+.card { border-radius: 28px; backdrop-filter: blur(10px); background: rgba(255,255,255,0.1); }
